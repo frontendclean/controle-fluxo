@@ -1,0 +1,120 @@
+//reset
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+cite,
+em,
+img,
+small,
+strong,
+b,
+u,
+i,
+center,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+section,
+summary,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100%;
+  background-color: #111b21;
+}
+
+html {
+  @extend body;
+  scroll-behavior: smooth;
+}
+
+.btn {
+  --btn-color: #627183;
+  --btn-bg: transparent;
+  --btn-height: 3.75rem;
+  --btn-padding-t: 0.5rem;
+  --btn-padding-l: 2rem;
+  --btn-padding-b: 0.5rem;
+  --btn-padding-r: 2rem;
+  --btn-font-size: 1.125rem;
+  --btn-font-weight: 400;
+  --btn-line-height: 1.318rem;
+  --btn-border-width: 0.063rem;
+  --btn-border-color: #E2E5E9;
+  --btn-border-radius: 0.313rem;
+
+  position: relative;
+  display: inline-block;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  line-height: var(--btn-line-height);
+  border: var(--btn-border-width) solid var(--btn-border-color);
+  height: var(--btn-height);
+  padding: var(--btn-padding-t) var(--btn-padding-l) var(--btn-padding-b) var(--btn-padding-r);
+  border-radius: var(--btn-border-radius);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+
+  &.btn-primary {
+    --btn-bg: #0169FE;
+    --btn-color: #FFF;
+    --btn-border-color: #0169FE;
+
+    &:hover {
+      --btn-bg: #0045a8;
+    }
+  }
+
+  &.btn-secondary {
+    --btn-bg: #92352c;
+    --btn-color: #FFF;
+    --btn-border-color: #92352c;
+
+    &:hover {
+      --btn-bg: #73261e;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<section class="container">
+  @if (is_loading) {
+    <app-loading></app-loading>
+  } @else {
+    <div class="technologies">
+      <div class="technologies-header">
+        <h1>O resultado foi {{technologies.length}} tecnologia{{ technologies.length > 1 ? 's' : ''}}.</h1>
+      </div>
+      <div class="technologies-content">
+        @for (technology of technologies; track technology) {
+          <app-item [item]="technology"></app-item>
+        } @empty {
+          <img src="not-found.svg" alt="" width="140" height="140">
+        }
+      </div>
+    </div>
+    <div class="group-actions">
+      <button (click)="recoverTechnologies()" class="btn btn-primary">atualizar</button>
+      <button (click)="recoverTechnologies(true)" class="btn btn-secondary">simular erro</button>
+    </div>
+  }
+</section>
+
+
